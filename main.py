@@ -9,7 +9,7 @@ st.set_page_config(page_title="LeapBot Chat", page_icon="🤖")
 
 # ─── 2. Load OpenAI key ───────────────────────────────────────────────────────────
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=st.secrets['KEY'])
 # ─── 3. Initialize session state with a detailed system prompt ─────────────────
 if "messages" not in st.session_state:
     st.session_state.messages = [
